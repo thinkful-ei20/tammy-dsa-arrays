@@ -136,6 +136,11 @@ function main () {
   //so that we can do O(1) actions as much as possible 
   //and have a O(n) action only once in a while
 
+  //**** the underscore is a naming conventions, 
+  //the function is private for internal use, it should not be exposed to outside
+  //originally from other object orientated languages
+  //*****/
+
 
 }
 
