@@ -127,6 +127,11 @@ function main () {
   myArr.pop();
   myArr.push('tauhida');
   myArr.get(0);
+  //returns NaN because we create a 'Float64Array' which only takes in standard Number types
+
+  //The purpose of _resize() is to create buffer space relative to our data size 
+  //so that we can do O(1) actions as much as possible 
+  //and have a O(n) action only once in a while
 
 
 }
