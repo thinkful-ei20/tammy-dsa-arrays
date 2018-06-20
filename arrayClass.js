@@ -125,7 +125,10 @@ function main () {
   myArr.pop();
   myArr.pop();
   myArr.pop();
+  //removed everything in the array
+
   myArr.push('tauhida');
+  //added one new element
   myArr.get(0);
   //returns NaN because we create a 'Float64Array' which only takes in standard Number types
 
