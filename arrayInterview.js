@@ -113,9 +113,71 @@ const products = (arr) => {
   return productArr;
 };
 
-console.log(products([1,2,3,4]));
+//console.log(products([1,2,3,4]));
 
 //O(n^2)
 //for each element added onto the array 
 //the processing time increases by size of the array
+//array [x][y]
 
+//if array[0][0] = 0
+
+
+//            [0][1]  [0][2]  [0][3]  [0][4]
+//[0][0] = 0    0       0       0       0
+//[1][0] = 0
+//[2][0] = 0
+//[3][0] = 0
+//[4][0] = 0
+
+// const createNewBoard = (array) => {
+//   for (let i = 0; i > array.length; i++){
+//     for (let j = 0; j > array[i].length; j++){
+//       if(array[i][j] === 0) {
+//         for(let newRow = 0; newRow < array[i].length; newRow++){
+//           [i][newRow] = 0;
+//         }
+
+//         for(let newColumn = 0; newColumn < array.length; newColumn++){
+//           [newColumn][j] = 0;
+//         }
+//       }
+//     }
+//   }
+// };
+
+
+
+
+
+//2D array
+//input 2D array with 1 and 0s
+//output rows and columns set to zero
+
+const twoDemensionalArray = (arr) => {
+  const createNewBoard = (array) => {
+    for (let i = 0; i > array.length; i++){
+      for (let j = 0; j > array[i].length; j++){
+        if(array[i][j] === 0) {
+          for(let newRow = 0; newRow < array[i].length; newRow++){
+            [i][newRow] = 0;
+          }
+  
+          for(let newColumn = 0; newColumn < array.length; newColumn++){
+            [newColumn][j] = 0;
+          }
+        }
+      }
+    }
+  };
+  const newBoard = arr.map(createNewBoard);
+  return newBoard;
+};
+
+
+
+console.log(twoDemensionalArray([[1,0,1,1,0],
+  [0,1,1,1,0],
+  [1,1,1,1,1],
+  [1,0,1,1,1],
+  [1,1,1,1,1]]));
